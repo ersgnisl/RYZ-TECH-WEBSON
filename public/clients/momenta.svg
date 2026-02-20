@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" fill="none">
+  <!-- Dotted ring -->
+  <circle cx="100" cy="32" r="3.5" fill="#3b4de8"/>
+  <circle cx="114" cy="35" r="3" fill="#3b4de8"/>
+  <circle cx="124" cy="44" r="2.5" fill="#3b4de8"/>
+  <circle cx="127" cy="56" r="2.5" fill="#3b4de8"/>
+  <circle cx="122" cy="67" r="2.5" fill="#3b4de8"/>
+  <circle cx="113" cy="74" r="2.5" fill="#3b4de8"/>
+  <circle cx="101" cy="76" r="3" fill="#3b4de8"/>
+  <circle cx="88" cy="73" r="3" fill="#3b4de8"/>
+  <circle cx="78" cy="66" r="2.5" fill="#3b4de8"/>
+  <circle cx="73" cy="55" r="2.5" fill="#3b4de8"/>
+  <circle cx="76" cy="44" r="2.5" fill="#3b4de8"/>
+  <circle cx="87" cy="35" r="3" fill="#3b4de8"/>
+  <!-- Inner dots -->
+  <circle cx="100" cy="43" r="4" fill="#3b4de8"/>
+  <circle cx="111" cy="47" r="3.5" fill="#3b4de8"/>
+  <circle cx="114" cy="58" r="3" fill="#3b4de8"/>
+  <circle cx="107" cy="67" r="3" fill="#3b4de8"/>
+  <circle cx="95" cy="68" r="3" fill="#3b4de8"/>
+  <circle cx="87" cy="61" r="3" fill="#3b4de8"/>
+  <circle cx="86" cy="50" r="3.5" fill="#3b4de8"/>
+  <!-- Text -->
+  <text x="100" y="95" font-family="Inter, system-ui, sans-serif" font-weight="400" font-size="13" fill="#3b4de8" text-anchor="middle" letter-spacing="0.5">momenta™</text>
+</svg>
