@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Linkedin, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -29,10 +30,11 @@ export default function Footer() {
               className="flex items-center mb-6 w-fit"
               aria-label="RYZ Tech"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/logo1.png"
                 alt="RYZ Tech Digital Agency"
+                width={133}
+                height={28}
                 className="h-7 w-auto"
               />
             </Link>

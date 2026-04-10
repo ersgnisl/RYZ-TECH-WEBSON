@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -79,10 +80,12 @@ export default function Navbar() {
             className="flex items-center group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg"
             aria-label="RYZ Tech Ana Sayfa"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/logo1.png"
               alt="RYZ Tech Digital Agency"
+              width={152}
+              height={32}
+              priority
               className="h-8 w-auto"
             />
           </Link>

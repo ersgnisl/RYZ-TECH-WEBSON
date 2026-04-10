@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
 import Navbar from "@/components/layout/Navbar";
@@ -30,11 +31,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "RYZ Tech" }],
   creator: "RYZ Tech",
-  metadataBase: new URL("https://ryztech.com.tr"),
+  metadataBase: new URL("https://www.ryztechdigital.com"),
   openGraph: {
     type: "website",
     locale: "tr_TR",
-    url: "https://ryztech.com.tr",
+    url: "https://www.ryztechdigital.com",
     siteName: "RYZ Tech",
     title: "RYZ Tech | Dijital Pazarlama & Teknoloji Ajansı",
     description:
@@ -58,10 +59,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const langCookie = cookies().get("ryz-lang")?.value;
+  const initialLang = langCookie === "en" ? "en" : "tr";
+
   return (
     <html lang="tr" className={inter.variable}>
       <body className="font-sans antialiased">
-        <Providers>
+        <Providers initialLang={initialLang}>
           <Navbar />
           <div style={{ paddingTop: "var(--nav-height)" }}>
             {children}

@@ -1,9 +1,52 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+const WINDOW_MS = 10 * 60 * 1000;
+const MAX_REQUESTS = 5;
+const requestLog = new Map<string, number[]>();
+
+function getClientKey(req: NextRequest) {
+  const forwardedFor = req.headers.get("x-forwarded-for");
+  const ip = forwardedFor?.split(",")[0]?.trim() || "unknown";
+  return ip;
+}
+
+function isRateLimited(key: string) {
+  const now = Date.now();
+  const recent = (requestLog.get(key) || []).filter((stamp) => now - stamp < WINDOW_MS);
+  if (recent.length >= MAX_REQUESTS) {
+    requestLog.set(key, recent);
+    return true;
+  }
+
+  recent.push(now);
+  requestLog.set(key, recent);
+  return false;
+}
+
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, company, budget, message } = await req.json();
+    const origin = req.headers.get("origin");
+    const host = req.headers.get("host");
+    const expectedOrigin = host ? `https://${host}` : null;
+
+    if (origin && expectedOrigin && origin !== expectedOrigin) {
+      return NextResponse.json({ error: "Geçersiz istek kaynağı." }, { status: 403 });
+    }
+
+    const clientKey = getClientKey(req);
+    if (isRateLimited(clientKey)) {
+      return NextResponse.json(
+        { error: "Çok fazla deneme yapıldı. Lütfen biraz sonra tekrar deneyin." },
+        { status: 429 }
+      );
+    }
+
+    const { name, email, company, budget, message, website } = await req.json();
+
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
 
     if (!name || !email || !message) {
       return NextResponse.json(

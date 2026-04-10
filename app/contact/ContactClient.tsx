@@ -14,6 +14,7 @@ interface FormData {
   company: string;
   budget: string;
   message: string;
+  website: string;
 }
 
 export default function ContactPage() {
@@ -51,6 +52,7 @@ export default function ContactPage() {
     company: "",
     budget: "",
     message: "",
+    website: "",
   });
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [loading, setLoading] = useState(false);
@@ -213,6 +215,19 @@ export default function ContactPage() {
                           onChange={handleChange}
                           placeholder={t.contact.form.companyPlaceholder}
                           className="input-field"
+                        />
+                      </div>
+
+                      <div className="hidden" aria-hidden="true">
+                        <label htmlFor="website">Website</label>
+                        <input
+                          id="website"
+                          name="website"
+                          type="text"
+                          tabIndex={-1}
+                          autoComplete="off"
+                          value={form.website}
+                          onChange={handleChange}
                         />
                       </div>
 

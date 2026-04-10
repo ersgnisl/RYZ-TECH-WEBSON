@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/data/projects";
 import FadeIn from "@/components/motion/FadeIn";
@@ -64,9 +65,11 @@ export default function ProjectsPreview() {
                         {project.client}
                       </span>
                     ) : (
-                      <img
+                      <Image
                         src={project.logo}
                         alt={project.client}
+                        width={180}
+                        height={48}
                         onError={() => setLogoErrors((p) => ({ ...p, [project.slug]: true }))}
                         className="object-contain"
                         style={{ maxWidth: 180, maxHeight: 48 }}
