@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
-import { type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface FadeInProps {
   children: ReactNode;
@@ -13,19 +13,6 @@ interface FadeInProps {
   once?: boolean;
 }
 
-const variants: Variants = {
-  hidden: ({ y, x }: { y: number; x: number }) => ({
-    opacity: 0,
-    y,
-    x,
-  }),
-  visible: {
-    opacity: 1,
-    y: 0,
-    x: 0,
-  },
-};
-
 export default function FadeIn({
   children,
   delay = 0,
@@ -35,21 +22,43 @@ export default function FadeIn({
   className,
   once = true,
 }: FadeInProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (once) observer.disconnect();
+        } else if (!once) {
+          setIsVisible(false);
+        }
+      },
+      { rootMargin: "-60px 0px" }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [once]);
+
   return (
-    <motion.div
-      custom={{ y, x }}
-      variants={variants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once, margin: "-60px" }}
-      transition={{
-        delay,
-        duration,
-        ease: [0.4, 0, 0.2, 1],
-      }}
-      className={className}
+    <div
+      ref={ref}
+      className={cn("fade-in-lite", isVisible && "is-visible", className)}
+      style={
+        {
+          "--fade-delay": `${delay}s`,
+          "--fade-duration": `${duration}s`,
+          "--fade-x": `${x}px`,
+          "--fade-y": `${y}px`,
+        } as CSSProperties
+      }
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

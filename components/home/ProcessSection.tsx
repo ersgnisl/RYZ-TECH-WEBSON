@@ -1,15 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Search, Map, Zap, BarChart3 } from "lucide-react";
 import FadeIn from "@/components/motion/FadeIn";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { useLanguage } from "@/contexts/LanguageContext";
-
-const lineVariants = {
-  hidden: { scaleX: 0 },
-  visible: { scaleX: 1 },
-};
 
 export default function ProcessSection() {
   const { t } = useLanguage();
@@ -53,19 +47,14 @@ export default function ProcessSection() {
           {/* Connector lines (desktop only) */}
           <div className="hidden lg:block absolute top-[28px] left-[25%] right-[25%] pointer-events-none" aria-hidden="true">
             {[0, 1, 2].map((i) => (
-              <motion.div
+              <div
                 key={i}
-                className="absolute h-px origin-left"
+                className="absolute h-px process-connector"
                 style={{
                   left: `${i * 33.33}%`,
                   width: "33.33%",
                   background: "linear-gradient(90deg, rgba(99,102,241,0.4), rgba(34,211,238,0.2))",
                 }}
-                variants={lineVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 + i * 0.2, duration: 0.5 }}
               />
             ))}
           </div>

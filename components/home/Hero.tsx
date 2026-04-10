@@ -1,9 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
-import AnimatedOrbs from "@/components/motion/AnimatedOrbs";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
@@ -14,8 +12,11 @@ export default function Hero() {
       className="relative min-h-[90vh] flex items-center overflow-hidden"
       aria-label="Anasayfa hero bölümü"
     >
-      {/* Animated background orbs */}
-      <AnimatedOrbs />
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="orb hero-orb hero-orb-primary hidden sm:block bg-indigo-600/20" />
+        <div className="orb hero-orb hero-orb-secondary bg-violet-600/15" />
+        <div className="orb hero-orb hero-orb-accent hidden md:block bg-cyan-500/10" />
+      </div>
 
       {/* Grid pattern overlay */}
       <div
@@ -31,46 +32,27 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32 w-full">
         <div className="max-w-4xl">
           {/* Eyebrow tag */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
+          <div className="hero-reveal hero-reveal-1">
             <span className="tag mb-6 inline-flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
               {t.hero.eyebrow}
             </span>
-          </motion.div>
+          </div>
 
           {/* Main headline */}
-          <motion.h1
-            className="display-xl text-balance mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-          >
+          <h1 className="display-xl text-balance mb-6 hero-reveal hero-reveal-2">
             {t.hero.title}{" "}
             <span className="gradient-text">{t.hero.titleHighlight}</span>{" "}
             {t.hero.titleEnd}
-          </motion.h1>
+          </h1>
 
           {/* Subtitle */}
-          <motion.p
-            className="body-lg max-w-xl text-balance mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35, ease: [0.4, 0, 0.2, 1] }}
-          >
+          <p className="body-lg max-w-xl text-balance mb-10 hero-reveal hero-reveal-3">
             {t.hero.subtitle}
-          </motion.p>
+          </p>
 
           {/* CTA Buttons */}
-          <motion.div
-            className="flex flex-wrap items-center gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
-          >
+          <div className="flex flex-wrap items-center gap-4 hero-reveal hero-reveal-4">
             <Link
               href="/contact"
               className="btn-primary text-base px-7 py-4"
@@ -90,7 +72,7 @@ export default function Hero() {
                 className="group-hover:translate-x-1 transition-transform duration-200"
               />
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
 
