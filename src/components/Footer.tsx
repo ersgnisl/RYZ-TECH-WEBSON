@@ -9,6 +9,8 @@ export default function Footer() {
         src="/images/footer.png"
         alt=""
         fill
+        quality={100}
+        sizes="100vw"
         className="-z-10 object-cover"
       />
       <div className="mx-auto flex max-w-7xl flex-col gap-12 px-6 py-14 md:flex-row md:justify-between md:px-10">
@@ -18,6 +20,7 @@ export default function Footer() {
             alt="RYZTECH Digital Agency"
             width={161}
             height={96}
+            quality={90}
             className="h-auto w-32"
           />
           <div className="flex items-center gap-3">

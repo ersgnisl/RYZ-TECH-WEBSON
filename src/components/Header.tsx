@@ -18,6 +18,7 @@ export default function Header() {
             width={190}
             height={45}
             priority
+            quality={90}
           />
         </Link>
 
@@ -52,6 +53,8 @@ export default function Header() {
               src="/images/hamburger-menu.png"
               alt=""
               fill
+              quality={100}
+              sizes="100vw"
               className="-z-10 object-cover"
             />
             <button

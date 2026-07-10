@@ -9,6 +9,8 @@ export default function Hero() {
         alt=""
         fill
         priority
+        quality={100}
+        sizes="100vw"
         className="-z-10 object-cover"
       />
       <div className="mx-auto max-w-7xl">
