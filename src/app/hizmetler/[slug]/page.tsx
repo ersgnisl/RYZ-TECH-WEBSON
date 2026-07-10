@@ -46,9 +46,33 @@ export default async function ServicePage({
       />
 
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
-        <div className="grid gap-10 lg:grid-cols-3">
+        <Link
+          href="/neler-yapiyoruz"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-foreground hover:opacity-70"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 12H5M5 12L12 19M5 12L12 5"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          Neler Yapıyoruz&apos;a Dön
+        </Link>
+
+        <div className="mt-8 grid gap-10 lg:grid-cols-3">
           <div className="lg:col-span-2">
-            <h2 className="text-2xl font-bold text-foreground">Özet</h2>
+            <h2 className="text-2xl font-bold text-foreground">
+              Genel Bakış
+            </h2>
             <div className="mt-4 flex flex-col gap-4">
               {service.intro.map((p) => (
                 <p key={p} className="text-foreground/80">
