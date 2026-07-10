@@ -21,7 +21,7 @@ export default function Brands() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-12 md:px-10">
       <h2 className="mb-8 font-semibold text-foreground">Markalarımız</h2>
-      <div className="flex flex-wrap items-center gap-x-14 gap-y-6">
+      <div className="flex flex-wrap items-center justify-between gap-x-10 gap-y-6">
         {brands.map((brand) => (
           <div
             key={brand.alt}

@@ -22,7 +22,7 @@ export default function Footer() {
           />
           <div className="flex items-center gap-3">
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/ryz.tech"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -30,7 +30,7 @@ export default function Footer() {
               <Image src="/icons/insta-icon.png" alt="" width={20} height={20} />
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://tr.linkedin.com/company/ryz-tech"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
