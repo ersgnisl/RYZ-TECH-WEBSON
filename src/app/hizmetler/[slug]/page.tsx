@@ -65,7 +65,7 @@ export default async function ServicePage({
               strokeLinejoin="round"
             />
           </svg>
-          Neler Yapıyoruz&apos;a Dön
+          Tüm Hizmetleri Gör
         </Link>
 
         <div className="mt-8 grid gap-10 lg:grid-cols-3">
