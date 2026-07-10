@@ -31,7 +31,7 @@ export default function Services() {
         {services.map((service) => (
           <div
             key={service.href}
-            className="group relative rounded-lg bg-gradient-to-br from-brand-from to-brand-to p-6 pb-12 text-card-foreground"
+            className="group relative rounded-2xl bg-gradient-to-br from-brand-from to-brand-to p-6 pb-12 text-card-foreground"
           >
             <span className="absolute right-5 top-5 h-4 w-4 rounded-full bg-cta opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
             <h3 className="mb-2 pr-8 font-semibold">{service.label}</h3>
