@@ -1,26 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
-
-const posts = [
-  {
-    slug: "ugc-vs-aigc",
-    title: "UGC vs AIGC: Hangi İçerik Formatı Daha İyi Dönüşüm Sağlıyor?",
-    date: "3 Şubat 2025",
-    readTime: "6dk Okuma",
-    excerpt:
-      "Kullanıcı kaynaklı içerikler (UGC) ile yapay zeka destekli görsel üretimi (AIGC) arasındaki farklar, avantajlar ve hangi durumda hangisini kullanmanız gerektiği hakkında kapsamlı bir rehber.",
-  },
-  {
-    slug: "meta-reklamlarinda-roas-nasil-artirilir",
-    title: "Meta Reklamlarında ROAS Nasıl Artırılır? 5 Temel Strateji",
-    date: "15 Ocak 2025",
-    readTime: "5dk Okuma",
-    excerpt:
-      "Reklam bütçenizden en yüksek verimi almak için kreatif test döngüsü, audience segmentasyonu ve bid stratejilerini nasıl doğru kurgulamanız gerektiğini açıklıyoruz.",
-  },
-];
+import BlogCard from "@/components/BlogCard";
+import { blogPosts } from "@/lib/blog-posts";
 
 export default function Blog() {
+  const posts = blogPosts.slice(0, 2);
+
   return (
     <section className="mx-auto max-w-7xl px-6 py-12 md:px-10">
       <h2 className="mb-8 text-2xl font-semibold text-foreground md:text-3xl">
@@ -28,29 +12,7 @@ export default function Blog() {
       </h2>
       <div className="grid gap-6 md:grid-cols-2">
         {posts.map((post) => (
-          <article
-            key={post.slug}
-            className="rounded-2xl bg-foreground/[0.04] p-6"
-          >
-            <h3 className="font-semibold text-foreground">{post.title}</h3>
-            <div className="mt-3 flex items-center gap-4 text-sm text-foreground/60">
-              <span className="flex items-center gap-1.5">
-                <Image src="/icons/takvim.svg" alt="" width={16} height={16} />
-                {post.date}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Image src="/icons/saat.svg" alt="" width={16} height={16} />
-                {post.readTime}
-              </span>
-            </div>
-            <p className="mt-3 text-sm text-foreground/80">{post.excerpt}</p>
-            <Link
-              href={`/blog/${post.slug}`}
-              className="mt-4 inline-block text-sm font-semibold underline underline-offset-2"
-            >
-              Devamını Oku
-            </Link>
-          </article>
+          <BlogCard key={post.slug} post={post} />
         ))}
       </div>
       <div className="mt-10 text-center">
