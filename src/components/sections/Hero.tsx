@@ -14,16 +14,17 @@ export default function Hero() {
         className="-z-10 object-cover"
       />
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <h1 className="max-w-2xl text-4xl font-semibold leading-tight text-card-foreground md:text-5xl">
-          Dijital Dünyada{" "}
+        <h1 className="max-w-2xl text-4xl font-bold leading-tight text-card-foreground md:text-5xl">
+          Dijital Dünyada
+          <br />
           <span className="bg-gradient-to-r from-accent-from to-accent-to bg-clip-text text-transparent">
             Fark Yaratıyoruz
           </span>
         </h1>
-        <p className="mt-6 max-w-xl text-card-foreground/90">
-          Performans pazarlamadan yaratıcı prodüksiyona — ölçülebilir
-          sonuçlar, kalıcı marka izleri. Markanızın gerçek potansiyelini
-          birlikte ortaya çıkarıyoruz.
+        <p className="mt-6 max-w-xl font-semibold text-card-foreground/90">
+          Sıradan kampanyalarla değil, akılda kalan işlerle öne çıkıyoruz.
+          Veriyi pusula, yaratıcılığı motor olarak kullanıp markanızı zirveye
+          taşıyoruz.
         </p>
         <Link
           href="/iletisim"
