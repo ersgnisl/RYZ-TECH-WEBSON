@@ -22,13 +22,13 @@ export default function Hero() {
           </span>
         </h1>
         <p className="mt-6 max-w-xl font-semibold text-card-foreground/90">
-          Sıradan kampanyalarla değil, akılda kalan işlerle öne çıkıyoruz.
-          Veriyi pusula, yaratıcılığı motor olarak kullanıp markanızı zirveye
-          taşıyoruz.
+          Kaydırılıp geçilen değil, durup izlenen işler üretiyoruz.
+          Yaratıcılığı veriyle besleyerek bütçenizin karşılığını fazlasıyla
+          veriyoruz.
         </p>
         <Link
           href="/iletisim"
-          className="mt-8 inline-block rounded-md bg-cta px-6 py-3 font-semibold text-card-foreground transition hover:opacity-90"
+          className="mt-8 inline-block rounded-2xl bg-cta px-6 py-3 font-semibold text-card-foreground transition hover:opacity-90"
         >
           İletişime Geç
         </Link>
