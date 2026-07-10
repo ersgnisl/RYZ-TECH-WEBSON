@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -34,7 +33,12 @@ export default async function BlogPostPage({
 
   return (
     <>
-      <BlogPostHero title={post.title} tags={post.tags} />
+      <BlogPostHero
+        title={post.title}
+        date={post.date}
+        readTime={post.readTime}
+        tags={post.tags}
+      />
 
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
         <div className="mx-auto max-w-3xl">
@@ -59,17 +63,6 @@ export default async function BlogPostPage({
             </svg>
             Blog&apos;a Dön
           </Link>
-
-          <div className="mt-8 flex items-center gap-4 text-sm text-foreground/60">
-            <span className="flex items-center gap-1.5">
-              <Image src="/icons/takvim.svg" alt="" width={16} height={16} />
-              {post.date}
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Image src="/icons/saat.svg" alt="" width={16} height={16} />
-              {post.readTime}
-            </span>
-          </div>
 
           <section className="mt-8">
             <h2 className="text-2xl font-bold text-foreground">Özet</h2>

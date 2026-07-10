@@ -2,9 +2,13 @@ import Image from "next/image";
 
 export default function BlogPostHero({
   title,
+  date,
+  readTime,
   tags,
 }: {
   title: string;
+  date: string;
+  readTime: string;
   tags: string[];
 }) {
   return (
@@ -22,6 +26,26 @@ export default function BlogPostHero({
         <h1 className="max-w-3xl text-4xl font-bold text-card-foreground md:text-5xl">
           {title}
         </h1>
+        <div className="mt-4 flex items-center gap-4 text-sm text-card-foreground/80">
+          <span className="flex items-center gap-1.5">
+            <Image
+              src="/icons/takvim-white.svg"
+              alt=""
+              width={16}
+              height={16}
+            />
+            {date}
+          </span>
+          <span className="flex items-center gap-1.5">
+            <Image
+              src="/icons/saat-white.svg"
+              alt=""
+              width={16}
+              height={16}
+            />
+            {readTime}
+          </span>
+        </div>
         <div className="mt-6 flex flex-wrap gap-3">
           {tags.map((tag) => (
             <span
