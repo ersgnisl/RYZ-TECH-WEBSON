@@ -1,7 +1,7 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
+import { InstagramIcon, LinkedinIcon } from "@/components/icons/SocialIcons";
 
 export const metadata: Metadata = {
   title: "İletişim | RYZTECH Digital Agency",
@@ -100,39 +100,24 @@ export default function IletisimPage() {
               ))}
             </div>
 
-            <div className="mt-8 rounded-2xl bg-foreground/[0.04] px-6 py-5">
-              <p className="text-sm text-foreground/80">
-                Gönderdiğiniz briefe{" "}
-                <span className="font-semibold text-foreground">
-                  12 saat içinde
-                </span>{" "}
-                dönüş yapıyoruz.
-              </p>
-            </div>
-
             <div className="mt-8 flex items-center gap-3">
               <a
                 href="https://www.instagram.com/ryz.tech"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-foreground/[0.06] transition hover:bg-foreground/10"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-foreground/[0.06] text-foreground transition hover:bg-foreground/10"
               >
-                <Image src="/icons/insta-icon.png" alt="" width={18} height={18} />
+                <InstagramIcon className="h-[18px] w-[18px]" />
               </a>
               <a
                 href="https://tr.linkedin.com/company/ryz-tech"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-foreground/[0.06] transition hover:bg-foreground/10"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-foreground/[0.06] text-foreground transition hover:bg-foreground/10"
               >
-                <Image
-                  src="/icons/linkedin-icon.png"
-                  alt=""
-                  width={18}
-                  height={18}
-                />
+                <LinkedinIcon className="h-[18px] w-[18px]" />
               </a>
             </div>
           </div>

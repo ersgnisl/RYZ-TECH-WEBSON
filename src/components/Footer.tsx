@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { navGroups } from "@/lib/nav-links";
+import { InstagramIcon, LinkedinIcon } from "@/components/icons/SocialIcons";
 
 export default function Footer() {
   return (
@@ -23,27 +24,24 @@ export default function Footer() {
             quality={100}
             className="h-auto w-32"
           />
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 text-card-foreground">
             <a
               href="https://www.instagram.com/ryz.tech"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
+              className="hover:opacity-80"
             >
-              <Image src="/icons/insta-icon.png" alt="" width={20} height={20} />
+              <InstagramIcon className="h-5 w-5" />
             </a>
             <a
               href="https://tr.linkedin.com/company/ryz-tech"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
+              className="hover:opacity-80"
             >
-              <Image
-                src="/icons/linkedin-icon.png"
-                alt=""
-                width={20}
-                height={20}
-              />
+              <LinkedinIcon className="h-5 w-5" />
             </a>
             <a href="#" aria-label="Türkçe">
               <Image src="/icons/tr-icon.png" alt="" width={62} height={20} />
