@@ -1,0 +1,27 @@
+export type TeamMember = {
+  name: string;
+  title: string;
+  bio: string;
+  photo: string;
+};
+
+export const team: TeamMember[] = [
+  {
+    name: "Ahmet Faruk Akça",
+    title: "Kurucu Ortak & Dijital Pazarlama Müdürü",
+    bio: "Dijital pazarlamanın farklı kanallarında derinlemesine uzmanlaşarak, Meta, Google, TikTok ve LinkedIn üzerindeki kampanyalarla markaların ölçeklenmesine öncülük ediyor.",
+    photo: "/images/ahmet.png",
+  },
+  {
+    name: "Ersagun İslamoğulları",
+    title: "Kurucu Ortak & Dijital Ürün Müdürü",
+    bio: "Dijital ürün geliştirme ve teknoloji deneyimini büyüme odaklı bir bakış açısıyla birleştirerek, web ve e-ticaret çözümleriyle markalara güçlü bir dijital temel kazandırıyor.",
+    photo: "/images/ersagun.png",
+  },
+  {
+    name: "Eren Arda Yıldız",
+    title: "Kreatif İçerik ve UI/UX Tasarım Stajyeri",
+    bio: "İletişim ve Tasarım bölümü son sınıf öğrencisi olarak ekibimizde stajyer olarak yer alıyor; kreatif içerik üretimi ve UI/UX tasarım süreçlerinde destek sağlıyor.",
+    photo: "/images/eren.png",
+  },
+];
