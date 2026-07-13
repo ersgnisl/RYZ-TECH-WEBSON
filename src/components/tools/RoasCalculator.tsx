@@ -39,7 +39,7 @@ export default function RoasCalculator() {
   }
 
   const fields = [
-    { label: "Ürün Geliş Maliyeti", value: productCost, set: setProductCost },
+    { label: "Ürün Maliyeti", value: productCost, set: setProductCost },
     { label: "Kargo&Paketleme", value: shipping, set: setShipping },
     { label: "Komisyon Ücretleri", value: commission, set: setCommission },
     { label: "Diğer Giderler", value: other, set: setOther },

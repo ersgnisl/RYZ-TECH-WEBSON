@@ -47,42 +47,57 @@ export default function BudgetCalculator() {
           <span className="text-center font-bold text-foreground">
             Aylık Gelir Hedefiniz Nedir?
           </span>
-          <input
-            type="text"
-            inputMode="decimal"
-            placeholder="100.000 örn."
-            value={revenue}
-            onChange={(e) => setRevenue(e.target.value)}
-            className="rounded-xl border border-foreground/15 bg-background px-4 py-3 text-foreground outline-none focus:border-brand-to"
-          />
+          <div className="relative">
+            <input
+              type="text"
+              inputMode="decimal"
+              placeholder="100.000 örn."
+              value={revenue}
+              onChange={(e) => setRevenue(e.target.value)}
+              className="w-full rounded-xl border border-foreground/15 bg-background px-4 py-3 pr-10 text-foreground outline-none focus:border-brand-to"
+            />
+            <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-foreground/50">
+              ₺
+            </span>
+          </div>
         </label>
 
         <label className="flex flex-col gap-2">
           <span className="text-center font-bold text-foreground">
             Satışlarınızın Ortalama Sepet Tutarı Ne Kadar?
           </span>
-          <input
-            type="text"
-            inputMode="decimal"
-            placeholder="350 örn."
-            value={aov}
-            onChange={(e) => setAov(e.target.value)}
-            className="rounded-xl border border-foreground/15 bg-background px-4 py-3 text-foreground outline-none focus:border-brand-to"
-          />
+          <div className="relative">
+            <input
+              type="text"
+              inputMode="decimal"
+              placeholder="350 örn."
+              value={aov}
+              onChange={(e) => setAov(e.target.value)}
+              className="w-full rounded-xl border border-foreground/15 bg-background px-4 py-3 pr-10 text-foreground outline-none focus:border-brand-to"
+            />
+            <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-foreground/50">
+              ₺
+            </span>
+          </div>
         </label>
 
         <label className="flex flex-col gap-2">
           <span className="text-center font-bold text-foreground">
             Ortalama Tıklama Başına Maliyetiniz Ne Kadar?
           </span>
-          <input
-            type="text"
-            inputMode="decimal"
-            placeholder="2.20 örn."
-            value={cpc}
-            onChange={(e) => setCpc(e.target.value)}
-            className="rounded-xl border border-foreground/15 bg-background px-4 py-3 text-foreground outline-none focus:border-brand-to"
-          />
+          <div className="relative">
+            <input
+              type="text"
+              inputMode="decimal"
+              placeholder="2.20 örn."
+              value={cpc}
+              onChange={(e) => setCpc(e.target.value)}
+              className="w-full rounded-xl border border-foreground/15 bg-background px-4 py-3 pr-10 text-foreground outline-none focus:border-brand-to"
+            />
+            <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-foreground/50">
+              ₺
+            </span>
+          </div>
         </label>
 
         <button
