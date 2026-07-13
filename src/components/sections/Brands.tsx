@@ -32,7 +32,7 @@ export default function Brands() {
             width={brand.width}
             height={brand.height}
             quality={100}
-            className="h-auto w-32 object-contain md:w-40"
+            className="h-8 w-auto object-contain md:h-10"
           />
         ))}
       </div>
