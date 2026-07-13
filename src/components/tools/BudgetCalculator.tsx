@@ -51,7 +51,7 @@ export default function BudgetCalculator() {
             <input
               type="text"
               inputMode="decimal"
-              placeholder="200.000 örn."
+              placeholder="100.000 örn."
               value={revenue}
               onChange={(e) => setRevenue(e.target.value)}
               className="w-full rounded-xl border border-foreground/15 bg-background px-4 py-3 pr-10 text-foreground outline-none focus:border-brand-to"

@@ -39,10 +39,30 @@ export default function RoasCalculator() {
   }
 
   const fields = [
-    { label: "Ürün Maliyeti", value: productCost, set: setProductCost },
-    { label: "Kargo&Paketleme", value: shipping, set: setShipping },
-    { label: "Komisyon Ücretleri", value: commission, set: setCommission },
-    { label: "Diğer Giderler", value: other, set: setOther },
+    {
+      label: "Ürün Maliyeti",
+      value: productCost,
+      set: setProductCost,
+      placeholder: "300 örn.",
+    },
+    {
+      label: "Kargo&Paketleme",
+      value: shipping,
+      set: setShipping,
+      placeholder: "50 örn.",
+    },
+    {
+      label: "Komisyon Ücretleri",
+      value: commission,
+      set: setCommission,
+      placeholder: "80 örn.",
+    },
+    {
+      label: "Diğer Giderler",
+      value: other,
+      set: setOther,
+      placeholder: "20 örn.",
+    },
   ];
 
   return (
@@ -89,6 +109,7 @@ export default function RoasCalculator() {
                   <input
                     type="text"
                     inputMode="decimal"
+                    placeholder={field.placeholder}
                     value={field.value}
                     onChange={(e) => field.set(e.target.value)}
                     className="w-full rounded-xl border border-foreground/15 bg-background px-4 py-3 pr-10 text-foreground outline-none focus:border-brand-to"
