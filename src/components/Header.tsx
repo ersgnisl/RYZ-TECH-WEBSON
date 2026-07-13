@@ -79,10 +79,10 @@ export default function Header() {
               </svg>
             </button>
             <div className="flex min-h-full flex-col justify-between gap-10 px-8 py-10 md:px-14 md:py-12">
-              <nav className="flex flex-col gap-8 md:gap-10">
+              <nav className="flex flex-col gap-10 md:gap-14">
                 {navGroups.map((group) => (
                   <div key={group.title}>
-                    <h3 className="mb-3 text-2xl font-semibold text-card-foreground">
+                    <h3 className="mb-4 text-3xl font-bold text-card-foreground md:text-5xl">
                       {group.titleHref ? (
                         <Link
                           href={group.titleHref}
@@ -95,13 +95,13 @@ export default function Header() {
                         group.title
                       )}
                     </h3>
-                    <ul className="flex flex-col gap-2">
+                    <ul className="flex flex-col gap-3 md:gap-4">
                       {group.links.map((link) => (
                         <li key={link.href}>
                           <Link
                             href={link.href}
                             onClick={() => setIsOpen(false)}
-                            className="text-card-foreground/90 hover:text-card-foreground"
+                            className="text-lg font-medium text-card-foreground/90 hover:text-card-foreground md:text-2xl"
                           >
                             {link.label}
                           </Link>
@@ -116,7 +116,7 @@ export default function Header() {
                 <Link
                   href="/iletisim"
                   onClick={() => setIsOpen(false)}
-                  className="inline-block rounded-full bg-cta px-6 py-3 font-semibold text-card-foreground transition hover:opacity-90"
+                  className="inline-block rounded-full bg-cta px-8 py-4 text-lg font-semibold text-card-foreground transition hover:opacity-90"
                 >
                   Ücretsiz Teklif Al
                 </Link>

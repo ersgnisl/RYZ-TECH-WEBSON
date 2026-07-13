@@ -44,7 +44,6 @@ export const navGroups: NavGroup[] = [
   {
     title: "Araçlar",
     links: [
-      { label: "Bütçe Dağıtıcı", href: "/araclar/butce-dagitici" },
       { label: "Bütçe Hesaplayıcı", href: "/araclar/butce-hesaplayici" },
       { label: "ROAS Hesaplayıcı", href: "/araclar/roas-hesaplayici" },
     ],
