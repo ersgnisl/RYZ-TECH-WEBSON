@@ -78,11 +78,11 @@ export default function Header() {
                 />
               </svg>
             </button>
-            <div className="flex min-h-full flex-col justify-center gap-8 overflow-y-auto px-8 py-10 md:px-14 md:py-12">
-              <nav className="flex flex-col gap-6 md:gap-8">
+            <div className="flex min-h-full flex-col justify-between gap-8 overflow-y-auto pl-10 pr-8 py-10 md:pl-24 md:pr-14 md:py-12">
+              <nav className="flex flex-col gap-7 md:gap-9">
                 {navGroups.map((group) => (
                   <div key={group.title}>
-                    <h3 className="mb-2 text-xl font-bold text-card-foreground md:text-2xl">
+                    <h3 className="mb-2.5 text-2xl font-bold text-card-foreground md:text-3xl">
                       {group.titleHref ? (
                         <Link
                           href={group.titleHref}
@@ -116,7 +116,7 @@ export default function Header() {
                 <Link
                   href="/iletisim"
                   onClick={() => setIsOpen(false)}
-                  className="inline-block rounded-full bg-cta px-8 py-4 text-lg font-semibold text-card-foreground transition hover:opacity-90"
+                  className="inline-block rounded-full bg-cta px-6 py-3 text-base font-semibold text-card-foreground transition hover:opacity-90"
                 >
                   Ücretsiz Teklif Al
                 </Link>
