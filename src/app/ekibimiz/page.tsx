@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import { team } from "@/lib/team";
+import { LinkedinIcon } from "@/components/icons/SocialIcons";
 
 export const metadata: Metadata = {
   title: "Ekibimiz | RYZTECH Digital Agency",
@@ -28,9 +29,18 @@ export default function EkibimizPage() {
                 quality={100}
                 className="mx-auto h-28 w-28 rounded-full object-cover"
               />
-              <h2 className="mt-5 font-bold text-foreground">
-                {member.name}
-              </h2>
+              <div className="mt-5 flex items-center justify-center gap-2">
+                <h2 className="font-bold text-foreground">{member.name}</h2>
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${member.name} LinkedIn`}
+                  className="flex h-4.5 w-4.5 shrink-0 items-center justify-center rounded bg-brand-from text-card-foreground transition hover:opacity-80"
+                >
+                  <LinkedinIcon className="h-2.5 w-2.5" />
+                </a>
+              </div>
               <p className="mt-1 text-sm font-semibold text-brand-to">
                 {member.title}
               </p>
