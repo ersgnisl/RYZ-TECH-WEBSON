@@ -51,9 +51,10 @@ export default function Header() {
           />
           <div className="fixed inset-4 z-50 overflow-y-auto rounded-3xl shadow-xl md:inset-8">
             <Image
-              src="/images/hamburger-menu.png"
+              src="/images/hamburger-menu.webp"
               alt=""
               fill
+              priority
               quality={100}
               sizes="100vw"
               className="-z-10 object-cover"

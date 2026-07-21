@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function UcretsizTeklifPage() {
   return (
     <>
-      <PageHero title="Ücretsiz Teklif Al" image="/images/hero-sapka-3.png" />
+      <PageHero title="Ücretsiz Teklif Al" image="/images/hero-sapka-3.webp" />
 
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
         <TeklifForm />

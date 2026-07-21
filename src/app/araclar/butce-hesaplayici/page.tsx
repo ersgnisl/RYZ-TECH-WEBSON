@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ButceHesaplayiciPage() {
   return (
     <>
-      <PageHero title="Bütçe Hesaplayıcı" image="/images/hero-sapka-3.png" />
+      <PageHero title="Bütçe Hesaplayıcı" image="/images/hero-sapka-3.webp" />
 
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
         <BudgetCalculator />

@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28">
       <Image
-        src="/images/landing-page-hero.png"
+        src="/images/landing-page-hero.webp"
         alt=""
         fill
         priority

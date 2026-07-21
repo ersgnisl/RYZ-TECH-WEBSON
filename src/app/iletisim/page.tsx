@@ -64,7 +64,7 @@ const contactDetails = [
 export default function IletisimPage() {
   return (
     <>
-      <PageHero title="İletişim" image="/images/hero-sapka-3.png" />
+      <PageHero title="İletişim" image="/images/hero-sapka-3.webp" />
 
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">

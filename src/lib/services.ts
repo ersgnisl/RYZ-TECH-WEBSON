@@ -16,7 +16,7 @@ export const services: Service[] = [
   {
     slug: "dijital-pazarlama",
     title: "Dijital Pazarlama",
-    heroImage: "/images/dijital-pazarlama-hero.png",
+    heroImage: "/images/dijital-pazarlama-hero.webp",
     intro: [
       "Meta, Google, TikTok, LinkedIn ve Yandex platformlarında ölçülebilir, tamamen optimize edilmiş reklam stratejileri kurguluyoruz. Veriye dayalı analitik içgörülerle, dijital pazarlama bütçenizi en yüksek yatırım getirisi sağlayacak şekilde yönetiyoruz.",
       "Kampanyalarımızı kurgularken tahmine değil veriye güveniriz: her reklam seti gerçek zamanlı performans verisiyle izlenir, zayıf performans gösteren varyasyonlar hızlıca elenir, kazanan formatlar agresif şekilde ölçeklenir. Amacımız sadece tıklama değil, sürdürülebilir ve kârlı büyüme.",
@@ -67,7 +67,7 @@ export const services: Service[] = [
   {
     slug: "yaratici-produksiyon",
     title: "Yaratıcı Prodüksiyon",
-    heroImage: "/images/yaratici-hero.png",
+    heroImage: "/images/yaratici-hero.webp",
     intro: [
       "Dijital mecraların dinamiklerine uygun, kullanıcı etkileşimini en üst seviyeye çıkaran video ve görsel içerikler geliştiriyoruz. UGC ve AIGC yaklaşımlarımızla, marka kimliğinizle tamamen uyumlu ve dönüşüm odaklı kreatif çözümler üretiyoruz.",
       "Her kreatifi bir hipotez olarak ele alırız: hook varyasyonları, farklı görsel diller ve CTA'lar sistematik olarak test edilir. Kazanan formatlar belirlenip ölçeklenir, kaybedenler hızla elenir — bu sayede kreatif yorgunluğunun önüne geçer, sürekli taze içerik akışı sağlarız.",
@@ -111,7 +111,7 @@ export const services: Service[] = [
   {
     slug: "pazaryeri-yonetimi",
     title: "Pazaryeri Yönetimi",
-    heroImage: "/images/pazaryeri-hero.png",
+    heroImage: "/images/pazaryeri-hero.webp",
     intro: [
       "Amazon, Trendyol ve Hepsiburada gibi lider pazaryerlerindeki mağaza süreçlerinizi uçtan uca yönetiyoruz. Ürün optimizasyonu ve stratejik kampanya kurgularıyla markanızın dijital pazarlardaki satış hacmini büyütüyoruz.",
       "Satıcı panelinden ürün listelemelerine, reklam kampanyalarından stok/fiyat takibine kadar tüm operasyonu tek elden yürütüyoruz. Rakip analiziyle fiyatlandırma ve sıralama stratejinizi sürekli güncel tutuyoruz.",
@@ -155,7 +155,7 @@ export const services: Service[] = [
   {
     slug: "dijital-urun-ve-cozumler",
     title: "Dijital Ürün ve Çözümler",
-    heroImage: "/images/dijital-urun-hero.png",
+    heroImage: "/images/dijital-urun-hero.webp",
     intro: [
       "İnsanların gerçek ihtiyaçlarına yönelik, verimliliği artıran ve iş süreçlerini kolaylaştıran web tabanlı uygulamalar geliştiriyoruz. Fikir aşamasından yayına almaya kadar, kullanıcı ihtiyacını merkeze alan, ölçeklenebilir ve sürdürülebilir dijital ürünler tasarlıyoruz.",
       "Her projeye önce problemi anlayarak başlarız: kullanıcılarınızın gerçekte neye ihtiyaç duyduğunu, mevcut süreçlerin nerede tıkandığını tespit eder, çözümü buna göre kurgularız. Teknik altyapıdan kullanıcı deneyimine kadar her katmanı performans ve kullanılabilirlik odaklı inşa ederiz.",
@@ -202,7 +202,7 @@ export const services: Service[] = [
   {
     slug: "kampanya-ve-icerik-stratejisi",
     title: "Kampanya ve İçerik Stratejisi",
-    heroImage: "/images/kampanya-icerik-hero.png",
+    heroImage: "/images/kampanya-icerik-hero.webp",
     intro: [
       "Marka konumlandırmasından içerik mimarisine uzanan tüm süreçlerde, sürdürülebilir büyümeyi hedefleyen stratejik bir temel oluşturuyoruz. Kreatif kurgularımızı veri analitiğiyle destekleyerek, markanızın dijital performansını en üst seviyeye çıkarıyoruz.",
       "Rakip analizinden hedef kitle araştırmasına, içerik takviminden performans ölçümüne kadar stratejinin her katmanını birlikte kurgularız. Amaç tek seferlik kampanyalar değil, tutarlı ve bileşik büyüyen bir marka hikayesi.",
@@ -244,7 +244,7 @@ export const services: Service[] = [
   {
     slug: "ui-ux-web-tasarim",
     title: "UI / UX - Web Tasarım",
-    heroImage: "/images/ui-ux-hero.png",
+    heroImage: "/images/ui-ux-hero.webp",
     intro: [
       "Kullanıcı davranışlarını temel alarak, estetik ve işlevselliği bir arada sunan responsive arayüz tasarımları geliştiriyoruz. Wireframe mimarileri ve kullanıcı akış diyagramlarıyla, dijital varlıklarınızı kullanıcı dostu ve dönüşüm odaklı platformlara dönüştürüyoruz.",
       "Tasarım sürecine her zaman araştırmayla başlarız: kullanıcı davranış verisi ve ısı haritalarıyla mevcut sürtünme noktalarını tespit eder, çözümü buna göre kurgularız. Görsel çekicilik kadar kullanılabilirliği de önceliklendiririz.",

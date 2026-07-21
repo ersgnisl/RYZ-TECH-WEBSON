@@ -14,7 +14,7 @@ export default function BlogPostHero({
   return (
     <section className="relative isolate flex min-h-[400px] flex-col justify-end overflow-hidden pb-16 md:min-h-[480px] md:pb-20">
       <Image
-        src="/images/hero-sapka-3.png"
+        src="/images/hero-sapka-3.webp"
         alt=""
         fill
         priority

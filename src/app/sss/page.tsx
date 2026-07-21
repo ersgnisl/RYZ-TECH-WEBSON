@@ -59,7 +59,7 @@ const faqs = [
 export default function SssPage() {
   return (
     <>
-      <PageHero title="Sık Sorulan Sorular" image="/images/hero-sapka-3.png" />
+      <PageHero title="Sık Sorulan Sorular" image="/images/hero-sapka-3.webp" />
 
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
         <div className="mx-auto max-w-3xl">

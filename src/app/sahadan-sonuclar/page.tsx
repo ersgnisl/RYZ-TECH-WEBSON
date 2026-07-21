@@ -21,7 +21,7 @@ const banners = [
 export default function SahadanSonuclarPage() {
   return (
     <>
-      <PageHero title="Sahadan Sonuçlar" image="/images/hero-sapka-3.png" />
+      <PageHero title="Sahadan Sonuçlar" image="/images/hero-sapka-3.webp" />
 
       <div className="mx-auto max-w-7xl px-6 py-16 md:px-10">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

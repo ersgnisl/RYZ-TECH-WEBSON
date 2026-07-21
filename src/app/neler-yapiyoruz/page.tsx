@@ -109,7 +109,7 @@ function StatCard({ stat }: { stat: Stat }) {
 export default function NelerYapiyoruzPage() {
   return (
     <>
-      <PageHero title="Neler Yapıyoruz" image="/images/hero-beyond-2.png" />
+      <PageHero title="Neler Yapıyoruz" image="/images/hero-beyond-2.webp" />
 
       <div className="mx-auto flex max-w-7xl flex-col gap-16 px-6 py-16 md:px-10">
         {services.map((service, i) => (
